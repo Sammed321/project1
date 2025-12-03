@@ -1,8 +1,8 @@
+import Worker from "./models/worker.js";  // IMPORT MODEL CORRECTLY
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
-import Worker from "./models/worker.js";  // IMPORT MODEL CORRECTLY
 
 dotenv.config();
 
