@@ -8,6 +8,7 @@ export class WorkerPage extends PureComponent {
       fullName: "",
       phone: "",
       email: "",
+      password: "",
       skill: "",
       experience: "",
       location: "",
@@ -79,7 +80,17 @@ export class WorkerPage extends PureComponent {
               required
             />
           </div>
-
+          {/* Password */}
+          <div className="mb-3">
+            <label className="form-label">Password</label>
+            <input
+              type="password"
+              className="form-control"
+              onChange={(e) => this.setState({ password: e.target.value })}
+              required
+            />
+          </div>
+          
           {/* Skill Category */}
           <div className="mb-3">
             <label className="form-label">Skill Category</label>

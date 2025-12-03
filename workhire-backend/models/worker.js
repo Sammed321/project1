@@ -4,6 +4,7 @@ const WorkerSchema = new mongoose.Schema({
   fullName: String,
   phone: String,
   email: String,
+  password: String,
   skill: String,
   experience: Number,
   location: String,

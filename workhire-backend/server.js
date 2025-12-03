@@ -58,3 +58,14 @@ app.post("/api/workers", async (req, res) => {
 app.listen(process.env.PORT, () =>
   console.log(`Server running on port ${process.env.PORT} 🔥`)
 );
+app.post("/api/worker/login", async (req, res) => {
+  const { email, password } = req.body;
+
+  const worker = await Worker.findOne({ email, password });
+
+  if (!worker) {
+    return res.json({ success: false, message: "Invalid email or password" });
+  }
+
+  res.json({ success: true, message: "Login successful", worker });
+});

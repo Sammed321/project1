@@ -4,6 +4,8 @@ import Home from "./component/home.jsx"
 import About from "./component/About.jsx"
 import Footer from "./component/Footer.jsx"
 import WorkerPage from "./component/worker_page.jsx"
+import WorkerLogin from "./component/WorkerLogin.jsx"
+import WorkerDashboard from "./component/WorkerDashbord.jsx"
 function App() {
   return (
     <>
@@ -13,6 +15,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/workerpage" element={<WorkerPage />}></Route>
+        <Route path="/worker-login" element={<WorkerLogin />}></Route>
+        <Route path="/worker-dashboard" element={<WorkerDashboard />}></Route>
       </Routes>
 
       <Footer />
