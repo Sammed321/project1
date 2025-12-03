@@ -22,7 +22,7 @@ function WorkerLogin() {
   };
 
   return (
-    <div className="container mt-5" style={{ maxWidth: "400px" }}>
+    <div className="container mt-5 fade-in" style={{ maxWidth: "400px" }}>
       <h3 className="text-center mb-4">Worker Login</h3>
 
       <input
@@ -39,7 +39,7 @@ function WorkerLogin() {
         onChange={(e) => setPassword(e.target.value)}
       />
 
-      <button className="btn btn-primary w-100" onClick={loginWorker}>
+      <button className="btn btn-primary w-100 btn-animated" onClick={loginWorker}>
         Login
       </button>
     </div>

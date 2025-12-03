@@ -156,7 +156,7 @@ export class WorkerPage extends PureComponent {
           </div>
 
           {/* Submit Button */}
-          <button type="submit" className="btn btn-success w-100">
+          <button type="submit" className="btn btn-success w-100 btn-animated">
             Register Worker
           </button>
         </form>
