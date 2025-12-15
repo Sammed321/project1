@@ -9,7 +9,13 @@ const WorkerSchema = new mongoose.Schema({
   experience: Number,
   location: String,
   about: String,
-  pricePerHour: Number
+  pricePerHour: Number,
+
+  // IMPORTANT: Worker status added
+  status: {
+    type: String,
+    default: "available"    // available | hired
+  }
 });
 
 export default mongoose.model("Worker", WorkerSchema);

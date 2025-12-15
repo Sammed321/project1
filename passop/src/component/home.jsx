@@ -30,6 +30,18 @@ export class Home extends PureComponent {
       .then(data => this.setState({ results: data }))
       .catch(err => console.log(err));
   };
+  handleHire = (workerId) => {
+    fetch(`http://localhost:5000/api/workers/hire/${workerId}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" }
+    })
+      .then(res => res.json())
+      .then(data => {
+        alert("Worker hired successfully");
+      })
+      .catch(err => console.log(err));
+  };
+
 
   render() {
     return (
@@ -100,7 +112,12 @@ export class Home extends PureComponent {
                       <p><strong>Experience:</strong> {worker.experience} years</p>
                       <p><strong>Location:</strong> {worker.location}</p>
                       <p><strong>Price:</strong> ₹{worker.pricePerHour}/hr</p>
-                      <button className="btn btn-success w-100">Hire Now</button>
+                      <button
+                        className="btn btn-success w-100"
+                        onClick={() => this.handleHire(worker._id)}
+                      >
+                        Hire Now
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -155,7 +172,15 @@ export class Home extends PureComponent {
                       <p className="card-text">
                         Professional Electrician with 5+ years of experience.
                       </p>
-                      <button className="btn btn-primary w-100">Hire Now</button>
+                      <button
+                        className="btn btn-success w-100"
+                        onClick={() => {
+                          this.handleHire(worker._id);
+                          console.log("Hire clicked for worker:", worker);
+                        }}
+                      >
+                        Hire Now
+                      </button>
                     </div>
                   </div>
                 </div>
